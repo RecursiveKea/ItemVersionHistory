@@ -1,0 +1,44 @@
+//Site Style Reference: https://docs.microsoft.com/en-us/sharepoint/dev/spfx/use-theme-colors-in-your-customizations
+
+.divTabControlWrapper { display: inherit; }
+
+.divAllTabHeadingWrapper {
+    display: flex;
+}
+
+.divAllTabContentWrapper {
+    margin-top: 15px;
+}
+
+.divTabHeadingWrapper {
+    flex: auto;
+    padding-bottom: 5px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.divTabHeadingWrapper.InActiveTab {        
+    background-color: "[theme: neutralLight, default: #EEE]";
+
+    &:hover {
+        opacity: 0.75;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+.divTabHeadingWrapper.ActiveTab {
+    font-size: 20px;
+    font-weight: 700;
+    background-color: "[theme: primaryBackground, default: #0078D4]";
+    color: white;
+}
+
+.divTabContentWrapper.InActiveTab {
+    display: none;
+}
+
+
+.divTabContentWrapper.ActiveTab {
+    display: block;
+}

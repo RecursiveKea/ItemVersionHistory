@@ -1,0 +1,106 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import './CommonElements/stylesheets/CommonControlsFactoryStyle.module.scss';
+
+
+.divInputForm { display: inherit; }
+
+.divByVersionWrapper, .divByFieldWrapper  {
+  margin-bottom: 20px;
+
+  .divVersionHeading, .divByFieldHeading {
+    display: flex;
+    border-bottom-color: "[theme: primaryBackground, default: #000]";
+    //font-size: 12px;
+    font-size: medium;
+    font-weight: 600;
+    border-bottom: 1px solid black;
+
+    .divByFieldHeadingText { display: block; }
+    .divByFieldHeadingIcons { text-align: right; flex: auto; }
+
+    .divVersionLabelModifiedBy { flex: 5;}
+    .divVersionFileSize { flex: 1; }
+
+    .divVersionModifiedDate {
+      flex: 3;
+      text-align: right;
+    }
+
+    a {
+      text-decoration: none;
+      &:hover { opacity: 0.7 }
+    }
+  }
+
+
+  .divVersionFieldContent, .divByFieldContent {
+    display: inherit;
+
+    .divSpanNoChangesDetected {
+      font-style: italic;
+      //font-size: 11px;
+      font-size: small;
+    }    
+
+    table { 
+      width: 100%; 
+
+      th, td {
+        text-align: left;        
+        padding-bottom: 2px;
+        font-size: small;
+        vertical-align: top;
+      }
+
+      .tdVersionHistoryValueListColumn { min-width: 100px; width: 20%; }
+      .tdVersionHistoryValue { min-width: 200px; width: 40%; word-break: break-all; }
+
+      .tdByFieldSetByUser { min-width: 160px; width: 15%; }
+      .tdByFieldSetDate { min-width: 160px; width: 15%; }
+      .tdByFieldVersions { min-width: 95px; width: 15%; }
+      .tdByFieldValue { min-width: 200px; width: 45%; word-break: break-all; }
+    }
+  }
+}
+
+.divCompareOptions {
+  display: flex;
+
+  .divCompareLabel {
+    font-weight: 600;
+  }
+
+  .divCompareLabel, .divCompareControl {
+    flex: 1;    
+  }
+
+  .divCompareLabel, .divCompareControl select {
+    font-size: small
+  }
+}
+
+.divCompareResults {
+  margin-top: 20px;
+
+  table: { margin-top: 15px; }
+  th { border-bottom: 1px solid black; }
+  th, td { text-align: left; vertical-align: top; border-spacing: 0; border-collapse: collapse; }
+  .tdCompareVersionField { min-width: 160px; width: 15%; }
+  .tdCompareVersionComparison { min-width: 80px; width: 10%; }
+  .tdCompareVersionFieldValue { min-width: 200px; width: 37.5%; word-break: break-all; }
+}
+
+.divResults {
+  margin-top: 15px;
+}
+
+
+.CustomButton {
+  background: #0078d4;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  
+  &:hover { opacity: 0.75; }
+}

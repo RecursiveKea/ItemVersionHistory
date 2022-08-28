@@ -1,0 +1,64 @@
+.divInputFlex {
+
+  .lblHover label:hover { opacity: 0.7; }
+
+  .divGenericControlWrapper {
+    display: flex;
+    padding-bottom: 7px;
+
+    .divGenericControlLabelWrapper {
+      flex: 1;
+      label { font-size: medium; font-weight: bold };
+    }
+
+    .divGenericInputTextControlWrapper {
+      flex: 2;
+    }
+
+    .divGenericInputButtonControlWrapper {
+      flex: auto;
+    }
+
+    .divGenericInputCheckboxControlWrapper {
+      flex: auto;
+    }
+  }
+}
+
+
+//Source: https://loading.io/css/
+.ldsRing {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.ldsRing div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #0078D4;
+  border-radius: 50%;
+  animation: ldsRing 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #0078D4 transparent transparent transparent;
+}
+.ldsRing div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.ldsRing div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.ldsRing div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes ldsRing {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

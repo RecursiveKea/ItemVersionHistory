@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "kea-item-version-history-web-part",
+    "id": "aff05f67-ebfd-425e-b804-f6b783fb365c",
+    "version": "0.1.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.15.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "KeaItemVersionHistoryWebPart description"
+      },
+      "longDescription": {
+        "default": "KeaItemVersionHistoryWebPart description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "kea-item-version-history-web-part Feature",
+        "description": "The feature that activates elements of the kea-item-version-history-web-part solution.",
+        "id": "2d65fc22-4c32-497b-ac70-5b33e60f8f61",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/kea-item-version-history-web-part.sppkg"
+  }
+}

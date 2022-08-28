@@ -1,0 +1,16 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "version": "1.15.2",
+    "libraryName": "kea-item-version-history-web-part",
+    "libraryId": "aff05f67-ebfd-425e-b804-f6b783fb365c",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "KeaItemVersionHistoryWebPart",
+    "solutionShortDescription": "KeaItemVersionHistoryWebPart description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
