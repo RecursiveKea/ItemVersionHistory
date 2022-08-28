@@ -318,7 +318,7 @@ export abstract class VersionTabHtmlHelper {
   }
 
   
-  public static GetCompareVersionsHtml(theFieldMapping: Map<string, ISharePointListField>, theLeftVersion: IItemVersionHistory, theRightVersion: IItemVersionHistory, showJSON: boolean = false): string {
+  public static GetCompareVersionsHtml(theFieldMapping: Map<string, ISharePointListField>, theLeftVersion: IItemVersionHistory, theRightVersion: IItemVersionHistory, showJSON: boolean = false, jsonComparison: boolean = false): string {
     
     const theFieldKeys: Array<string> = HelperGenericFunctions.GetKeyArrayFromMap(theFieldMapping);
     theFieldKeys.sort(HelperGenericFunctions.AscendingSort);
@@ -337,7 +337,9 @@ export abstract class VersionTabHtmlHelper {
       const theField = theFieldMapping.get(currField);
       const theLeftFieldValue: string = ((showJSON) ? theLeftVersion.VersionMetadata.get(currField).NewValueJSON : theLeftVersion.VersionMetadata.get(currField).NewValue);
       const theRightFieldValue: string = ((showJSON) ? theRightVersion.VersionMetadata.get(currField).NewValueJSON : theRightVersion.VersionMetadata.get(currField).NewValue);
-      
+      const isMatch: boolean = ((jsonComparison) ? theLeftVersion.VersionMetadata.get(currField).NewValueJSON === theRightVersion.VersionMetadata.get(currField).NewValueJSON : theLeftFieldValue === theRightFieldValue);
+
+
       theResult += (`
         <tr>
           <td class="${styles.tdCompareVersionField}">
@@ -345,7 +347,7 @@ export abstract class VersionTabHtmlHelper {
               ${theField.Title}
             </span>
           </td>
-          <td class="${styles.tdCompareVersionComparison}">${(theLeftFieldValue === theRightFieldValue) ? "Same": "Different"}</td>
+          <td class="${styles.tdCompareVersionComparison}">${(isMatch) ? "Same": "Different"}</td>
           <td class="${styles.tdCompareVersionFieldValue}">${theLeftFieldValue}</td>
           <td class="${styles.tdCompareVersionFieldValue}">${theRightFieldValue}</td>
         </tr>

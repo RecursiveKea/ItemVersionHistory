@@ -212,7 +212,7 @@ export default class ItemVersionHistoryWebPart extends BaseClientSideWebPart<IIt
 
                             const leftVersion: IItemVersionHistory = theVersionHistoryDataset.get(Number(leftVersionIDControl.value));
                             const rightVersion: IItemVersionHistory = theVersionHistoryDataset.get(Number(rightVersionIDControl.value));
-                            const theCompareHtml: string = VersionTabHtmlHelper.GetCompareVersionsHtml(theFieldsFormatted, leftVersion, rightVersion, displayTypeIsJSON);
+                            const theCompareHtml: string = VersionTabHtmlHelper.GetCompareVersionsHtml(theFieldsFormatted, leftVersion, rightVersion, displayTypeIsJSON, (theComparisonType.value === "JSON"));
                             document.getElementById("divCompareResults").innerHTML = theCompareHtml;
                           }
                         });
